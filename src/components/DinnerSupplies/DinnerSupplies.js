@@ -1,16 +1,14 @@
-function DinnerSupplies({guestList}) {
+import SilverWare from "../SilverWare/SilverWare"
+
+function DinnerSupplies({ guestList }) {
+    let count = guestList.length * 2
+
     return (
         <>
             <h2>Dinner Supplies</h2>
-            <div>
-                Spoons: {guestList.length * 2}
-            </div>
-            <div>
-                Forks: {guestList.length * 2}
-            </div>
-            <div>
-                Knives: {guestList.length * 2}
-            </div>
+            <SilverWare name="Spoons" count={count} />
+            <SilverWare name="Fork" count={count} />
+            <SilverWare name="Knives" count={count} />
         </>
     )
 }
